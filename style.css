@@ -1,0 +1,234 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* General page setup */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #002244, #004080); /* gradient blue */
+  margin: 0;
+  padding: 0;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Navigation bar */
+header {
+  background: rgba(0, 0, 34, 0.9);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #66ccff;
+  border-bottom: 2px solid #66ccff;
+}
+
+/* Section styling */
+section {
+  padding: 80px 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Titles */
+h1, h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.8em;
+  border-bottom: 2px solid #66ccff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Project list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #00509e;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+ul li:hover {
+  background: #0073e6;
+  transform: translateY(-3px);
+}
+
+/* Links */
+a {
+  color: #66ccff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #001122;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+  border-top: 2px solid #66ccff;
+}
+/* Profile picture styling */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* makes it round */
+  border: 4px solid #66ccff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  object-fit: cover;
+}
+/* Active link in navbar */
+nav ul li a.active {
+  color: #66ccff;
+  border-bottom: 2px solid #66ccff;
+}
+/* Fade-in animation */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Profile photo zoom-in on load */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* round shape */
+  border: 4px solid #66ccff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  object-fit: cover;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.profile-pic.show {
+  transform: scale(1);
+  opacity: 1;
+}
+/* Social icons in footer */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: #66ccff;
+  transform: scale(1.2);
+}
+/* Special WhatsApp color */
+.social-links a .fa-whatsapp {
+  color: #25D366; /* WhatsApp green */
+}
+
+.social-links a .fa-whatsapp:hover {
+  color: #66ccff; /* match hover with site theme */
+}
+/* CV Button */
+.cv-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #66ccff;
+  color: #002244;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cv-btn:hover {
+  background: #33bbff;
+  transform: scale(1.05);
+}
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #66ccff;
+  color: #002244;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background: #33bbff;
+  transform: scale(1.05);
+}
+
